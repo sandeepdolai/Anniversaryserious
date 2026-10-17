@@ -1,2 +1,85 @@
-skills/
-node_modules/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+*.log
+dev.log
+dev.out.log
+test
+prompt
+
+server.log
+# Skills directory
+/skills/
+# Large upload files (videos, frames, scripts)
+/upload/video_*.mp4
+/upload/frames/
+/upload/screenshot-*.png
+/upload/sc-*.png
+/upload/mobile-*.png
+/upload/photos-run.log
+/upload/objects-run.log
+/upload/photos-parallel.log
+/upload/objects-parallel.log
+/upload/photo-gen.log
+/upload/obj-gen.log
+/upload/images-sdk.log
+/upload/gen-loop.log
+
+# Skills & misc
+/skills/
+/mini-services/
+/tests/
+
+# Prisma local DB
+/prisma/*.db
+/db/*.db
+
+# Exclude the entire upload folder (video, frames, screenshots, logs) but
+# keep the gen-images.ts script for reproducibility
+/upload/*
+!/upload/gen-images.ts
+!/upload/gen-photos.sh
+!/upload/gen-objects.sh
+!/upload/README.md
